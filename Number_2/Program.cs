@@ -36,10 +36,12 @@ void Searching_P_S_Angle(int[] col)
 
     if (angle1 == 90 || angle2 == 90 || angle3 == 90)
         Console.WriteLine("Треугольник является прямоугольным");
-    if (a == b || a == c || b == c)
-        Console.WriteLine("Треугольник является равнобедренным");
+        
     if (a == b && b == c)
         Console.WriteLine("Треугольник является равносторонним");
+    else if (a == b || a == c || b == c)
+        Console.WriteLine("Треугольник является равнобедренным");
+
 }
 
 
