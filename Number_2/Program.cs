@@ -9,21 +9,17 @@ void FillArray(int[] col)
         col[i] = Convert.ToInt32(Console.ReadLine());
 }
 
-void Printarray(int[] col)
-{
-    foreach (int item in col)
-        Console.Write(item + " ");
-}
 
 void Searching_P_S_Angle(int[] col)
 {
-    int P = col[0] + col[1] + col[2];
-    double p = P / 2;
-    double S = Math.Sqrt(p * (p - col[0]) * (p - col[1]) * (p - col[2]));
-
     double a = col[0];
     double b = col[1];
     double c = col[2];
+
+    double P = a + b + c;
+    double p = P / 2;
+    double S = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+
     double ang1 = (a*a + c*c - b*b) / (2 *a*c);
     double angle1 = Math.Acos(ang1) * (180.0 / Math.PI);
 
@@ -36,7 +32,7 @@ void Searching_P_S_Angle(int[] col)
 
     if (angle1 == 90 || angle2 == 90 || angle3 == 90)
         Console.WriteLine("Треугольник является прямоугольным");
-        
+
     if (a == b && b == c)
         Console.WriteLine("Треугольник является равносторонним");
     else if (a == b || a == c || b == c)
