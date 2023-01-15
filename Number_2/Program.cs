@@ -50,4 +50,4 @@ if (array[0] + array[1] > array[2] && array[0] + array[2] > array[1] && array[1]
     {
         Searching_P_S_Angle(array);
     }
-else Console.WriteLine("С такими сторонами треуголника не существует");
+else Console.WriteLine("С такими сторонами треугольника не существует");
